@@ -4,6 +4,13 @@ Main: https://github.com/kuulaid/BBuildLabsPC
 Mirror: https://github.com/kuulaid/BBuildLabsPC-mirror <br>
 A C++ web application using the Crow framework and MySQL, designed to manage PC accounts and parts.
 
+
+--- 
+## Test video of working PC Builder on Localhost:
+
+https://github.com/user-attachments/assets/8779bd41-8563-4ccc-a04e-0d076c0ee8e5
+
+This website is for pc building, has an example 3d models, has a working database for users/products/orders.
 ---
 
 ## ⚙️ Prerequisites
@@ -30,6 +37,8 @@ If you're not familiar with Crow, search for a guide or tutorial on YouTube to h
 
 sudo apt update
 sudo apt install g++ cmake libboost-all-dev libssl-dev
+
+
 
 git clone https://github.com/CrowCpp/crow.git
 cd crow
