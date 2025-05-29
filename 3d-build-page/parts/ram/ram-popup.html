@@ -1,0 +1,55 @@
+
+  </head>
+  <body>
+  <div class="popup-container">
+    <!-- Sidebar -->
+    <div class="filter-sidebar">
+      <h2>Quick Add</h2>
+  
+      <div class="filter-option">
+        <label><input type="checkbox" id="compatibility" checked /> Compatibility Filter</label>
+      </div>
+  
+      <div class="filter-option">
+        <h3>Price</h3>
+        <input id="priceRange" type="range" min="7.99" max="500" step="1" value="500" />
+        <div class="range-values">
+          <span>₱7.99</span>
+          <span>₱<span id="priceLabel">500</span></span>
+        </div>
+      </div>
+  
+      <div class="filter-option">
+        <h3>RAM Type</h3>
+        <div class="checkbox-list" id="ramType"></div>
+      </div>
+
+  
+      <div class="filter-option">
+        <h3>Speed</h3>
+        <input id="speedRange" type="range" min="33" max="8400" step="1" value="350" />
+        <div class="range-values">
+          <span>33MHz</span>
+          <span><span id="speedLabel">350</span> MHz</span>
+        </div>
+      </div>
+  
+      <div class="filter-option">
+        <h3>Total Capacity</h3>
+        <input id="totalCapacity" type="range" min="1" max="512" step="1" value="64" />
+        <div class="range-values">
+          <span>1 GB</span>
+          <span><span id="capacityLabel">512</span> GB </span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Products -->
+    <div class="product-display">
+      <div class="search-bar">
+        <input id="searchInput" placeholder="Search" type="text" />
+      </div>
+      <div id="ramProductList" class="product-list"></div> <!-- const productList = document.getElementById("productList");
+      -->
+    </div>
+  </div>

@@ -1,0 +1,89 @@
+<div class="popup-container">
+    <!-- Sidebar -->
+    <div class="filter-sidebar">
+      <h2>Quick Add</h2>
+
+      <div class="filter-option">
+        <label><input type="checkbox" id="compatibility" checked /> Compatibility Filter</label>
+      </div>
+
+      <!-- Price Filter -->
+      <div class="filter-option">
+        <h3>Price</h3>
+        <input id="priceRange" type="range" min="40" max="1000" step="1" value="1000" />
+        <div class="range-values">
+          <span>₱40</span>
+          <span>₱<span id="priceLabel">1916339</span></span>
+        </div>
+      </div>
+
+      <!-- Socket Filter -->
+      <div class="filter-option">
+        <h3>Socket</h3>
+        <div class="checkbox-list" id="socket"></div>
+      </div>
+
+      <!-- PCIe Filter -->
+      <div class="filter-option">
+        <h3>Interface</h3>
+        <div class="checkbox-list" id="pcieVersion"></div>
+      </div>
+      
+
+      <!-- Chipset Filter -->
+      <div class="filter-option">
+        <h3>Chipset</h3>
+        <div class="checkbox-list" id="chipset"></div>
+      </div>
+
+      <!-- Form Factor Filter -->
+      <div class="filter-option">
+        <h3>Form Factor</h3>
+        <div class="checkbox-list" id="formFactor"></div>
+      </div>
+
+      <!-- RAM Type Filter -->
+      <div class="filter-option">
+        <h3>RAM Type</h3>
+        <div class="checkbox-list" id="ramType"></div>
+      </div>
+
+      <!-- Max Memory -->
+      <div class="filter-option">
+        <h3>Max Memory</h3>
+        <input id="maxMemoryRange" type="range" min="4" max="256" step="1" value="256" />
+        <div class="range-values">
+          <span>4 GB</span>
+          <span><span id="maxMemoryLabel">256</span> GB</span>
+        </div>
+      </div>
+
+      <!-- Max SATA Ports -->
+      <div class="filter-option">
+        <h3>Max SATA Ports</h3>
+        <input id="sataRange" type="range" min="2" max="50" step="1" value="12" />
+        <div class="range-values">
+          <span>2</span>
+          <span><span id="sataLabel">12</span> Ports</span>
+        </div>
+      </div>
+
+      <!-- Max RAM Slots -->
+      <div class="filter-option">
+        <h3>Max RAM Slots</h3>
+        <input id="ramSlotRange" type="range" min="1" max="8" step="1" value="8" />
+        <div class="range-values">
+          <span>1</span>
+          <span><span id="slotLabel">8</span> Slots</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products -->
+    <div class="product-display">
+      <div class="search-bar">
+        <input id="searchInput" placeholder="Search" type="text" />
+      </div>
+      <div id="moboProductList" class="product-list"></div>
+    </div>
+  </div>

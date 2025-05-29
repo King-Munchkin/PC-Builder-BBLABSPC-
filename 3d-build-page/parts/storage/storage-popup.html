@@ -1,0 +1,59 @@
+
+  <div class="popup-container">
+    <!-- Sidebar -->
+    <div class="filter-sidebar">
+      <h2>Quick Add</h2>
+
+
+      <div class="filter-option">
+        <h3>Price</h3>
+        <input id="priceRange" type="range" min="7.99" max="500" step="1" value="500" />
+        <div class="range-values">
+          <span>₱7.99</span>
+          <span>₱<span id="priceLabel">500</span></span>
+        </div>
+      </div>
+
+      <div class="filter-option">
+        <h3>RPM</h3>
+        <div class="checkbox-list" id="rpmFilters"></div>
+      </div>
+
+      <div class="filter-option">
+        <h3>Form Factor</h3>
+        <div class="checkbox-list" id="formFactorFilters"></div>
+      </div>
+
+      <div class="filter-option">
+        <h3>Interface</h3>
+        <div class="checkbox-list" id="interfaceFilters"></div>
+      </div>
+
+      <div class="filter-option">
+        <h3>NVMe</h3>
+        <div class="checkbox-list" id="nvmeFilters">
+          <label><input type="checkbox" value="Yes" checked /> Yes</label>
+          <label><input type="checkbox" value="No" checked /> No</label>
+        </div>
+      </div>
+
+      <div class="filter-option">
+        <h3>Capacity</h3>
+        <input id="capacityRange" type="range" min="64" max="10000" step="1" value="10000" />
+        <div class="range-values">
+          <span>64 GB</span>
+          <span><span id="capacityLabel">10000</span> TB</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products -->
+    <div class="product-display">
+      <div class="search-bar">
+        <input id="searchInput" placeholder="Search" type="text" />
+      </div>
+      <div id="storageProductList" class="product-list"></div>
+    </div>
+  </div>
+
+

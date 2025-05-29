@@ -1,0 +1,38 @@
+<div class="popup-container">
+  <!-- Sidebar -->
+  <div class="filter-sidebar">
+    <h2>Quick Add</h2>
+
+    <div class="filter-option">
+      <label><input type="checkbox" id="compatibility" checked /> Compatibility Filter</label>
+    </div>
+
+    <!-- Price Filter -->
+    <div class="filter-option">
+      <h3>Price</h3>
+      <input id="priceRange" type="range" min="0" max="100" step="1" value="100" />
+      <div class="range-values">
+        <span>₱0</span>
+        <span>₱<span id="priceLabel">100</span></span>
+      </div>
+    </div>
+
+    <!-- Quantity Filter -->
+    <div class="filter-option">
+      <h3>Quantity</h3>
+      <input id="quantityRange" type="range" min="1" max="10" step="1" value="1" />
+      <div class="range-values">
+        <span>1</span>
+        <span><span id="quantityLabel">1</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Products -->
+  <div class="product-display">
+    <div class="search-bar">
+      <input id="searchInput" placeholder="Search" type="text" />
+    </div>
+    <div id="fansProductList" class="product-list"></div>
+  </div>
+</div>

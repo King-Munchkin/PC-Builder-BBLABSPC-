@@ -1,0 +1,67 @@
+<div class="popup-container">
+  <!-- Sidebar -->
+  <div class="filter-sidebar">
+    <h2>Quick Add</h2>
+
+    <div class="filter-option">
+      <label><input type="checkbox" id="compatibility" checked /> Compatibility Filter</label>
+    </div>
+
+    <div class="filter-option">
+      <h3>Price</h3>
+      <input id="priceRange" type="range" min="0" max="300" step="1" value="300" />
+      <div class="range-values">
+        <span>₱0</span>
+        <span>₱<span id="priceLabel">300</span></span>
+      </div>
+    </div>
+
+    <div class="filter-option">
+      <label><input type="checkbox" id="compatibility" checked /> Compatibility Filter</label>
+    </div>
+
+    <div class="filter-option">
+      <h3>Form Factor</h3>
+      <div class="checkbox-list" id="formFactorFilters"></div>
+    </div>
+
+    <div class="filter-option">
+      <h3>Efficiency Rating</h3>
+      <div class="checkbox-list" id="efficiencyFilters"></div>
+    </div>
+
+    <div class="filter-option">
+      <h3>Modularity</h3>
+      <div class="checkbox-list" id="modularityFilters">
+        <label><input type="checkbox" value="Fully Modular" checked /> Fully Modular</label>
+        <label><input type="checkbox" value="Semi Modular" checked /> Semi Modular</label>
+        <label><input type="checkbox" value="Non Modular" checked /> Non Modular</label>
+      </div>
+    </div>
+
+    <div class="filter-option">
+      <h3>Fanless</h3>
+      <div class="checkbox-list" id="fanlessFilters">
+        <label><input type="checkbox" value="Yes" checked /> Yes</label>
+        <label><input type="checkbox" value="No" checked /> No</label>
+      </div>
+    </div>
+
+    <div class="filter-option">
+      <h3>Wattage</h3>
+      <input id="wattageRange" type="range" min="200" max="2000" step="1" value="2000" />
+      <div class="range-values">
+        <span>200W</span>
+        <span><span id="wattageLabel">2000</span>W</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Products -->
+  <div class="product-display">
+    <div class="search-bar">
+      <input id="searchInput" placeholder="Search" type="text" />
+    </div>
+    <div id="psuProductList" class="product-list"></div>
+  </div>
+</div>

@@ -1,0 +1,287 @@
+:root {
+    --primary-color: #010102;
+    --secondary-color: #09090f;
+    --tertiary-color: #1a1a28;
+    --accent-white: #d9d9d9;
+    --accent-purple: #9b59b6;
+    --text-color: #ffffff;
+    --background-color: #ffffff;
+  }
+  
+  .auth-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jersey 25", sans-serif;
+  }
+  
+
+  .auth-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+  
+  .auth-container .modal-box {
+    width: 750px;
+    height: 450px;
+    position: relative;
+    background-color: var(--tertiary-color);
+    animation: pop 0.3s ease-out;
+    border-radius: 1.25em;
+    overflow: hidden;
+  }
+  
+  .auth-container .btn-close-login,
+  .auth-container .btn-close-signup {
+    color: var(--text-color);
+    position: absolute;
+    top: 0.625rem;
+    right: 1.375rem;
+    font-size: 2.5em;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .auth-container .main-content {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-color);
+    text-align: center;
+    padding: 0 20px;
+    border-radius: 1.25em;
+    z-index: 1;
+    transition: 0.6s ease-in-out 1.2s, visibility 0s 0.5s;
+  }
+  
+  .auth-container .modal-box.active .main-content {
+    right: 50%;
+  }
+  
+  .auth-container .main-content.signup {
+    visibility: hidden;
+  }
+  
+  .auth-container .modal-box.active .main-content.signup {
+    visibility: visible;
+  }
+  
+  .auth-container .modal-box.active .main-content.login {
+    visibility: hidden;
+  }
+  
+  .auth-container .main-content h2 {
+    font-size: 2.5em;
+    color: var(--text-color);
+    margin: 0 0 0.625em 0;
+  }
+  
+  .auth-container .main-content p {
+    font-size: 0.75em;
+    color: var(--text-color);
+    margin-bottom: 0.625em;
+  }
+  
+  /* Forms */
+  .auth-container #login-form,
+  .auth-container #signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .auth-container #login-form input,
+  .auth-container #login-form button,
+  .auth-container #signup-form input,
+  .auth-container #signup-form button {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 0.625em;
+  }
+  
+  .auth-container #login-form input,
+  .auth-container #signup-form input {
+    background-color: var(--accent-white);
+    font-size: 1em;
+    padding: 13px 50px 13px 20px;
+    border: 1px solid var(--accent-white);
+    border-radius: 0.625em;
+    outline: none;
+    font-weight: 500;
+  }
+  
+  .auth-container #login-form input::placeholder,
+  .auth-container #signup-form input::placeholder {
+    color: #888;
+    font-weight: 400;
+  }
+  
+  .auth-container #login-form .forgot-link {
+    font-size: 0.75em;
+    color: var(--text-color);
+    margin-bottom: 0.625em;
+    text-decoration: none;
+  }
+  
+  .auth-container #login-form button,
+  .auth-container #signup-form button {
+    background-color: var(--accent-purple);
+    color: var(--text-color);
+    font-size: 1em;
+    border: 1px solid var(--accent-purple);
+    border-radius: 0.625em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .auth-container #login-form button:hover,
+  .auth-container #signup-form button:hover {
+    background-color: #8e44ad;
+    border: 1px solid #8e44ad;
+  }
+  
+  /* Separator lines */
+  .auth-container .main-content .login-separator,
+  .auth-container .main-content .signup-separator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .auth-container .login-separator hr,
+  .auth-container .signup-separator hr {
+    width: 145px;
+    border: 1px solid var(--text-color);
+    opacity: 0.7;
+    margin-bottom: 0.3em;
+  }
+  
+  /* Google buttons */
+  .auth-container .btn-login-google,
+  .auth-container .btn-signup-google {
+    height: 3rem;
+    font-size: 1em;
+    background-color: var(--accent-white);
+    margin-bottom: 0.625em;
+    border: 1px solid var(--accent-white);
+    border-radius: 0.625em;
+    cursor: pointer;
+  }
+  
+  .auth-container .btn-login-google:hover,
+  .auth-container .btn-signup-google:hover {
+    background-color: #a6a6a6;
+    color: var(--text-color);
+    border: 1px solid #a6a6a6;
+  }
+  
+  /* Toggle Box */
+  .auth-container .toggle-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .auth-container .toggle-box::before {
+    content: "";
+    position: absolute;
+    left: -250%;
+    width: 300%;
+    height: 100%;
+    background-color: var(--accent-purple);
+    border-radius: 8em;
+    z-index: 2;
+    transition: 1.8s ease-in-out;
+  }
+  
+  .auth-container .modal-box.active .toggle-box::before {
+    left: 50%;
+  }
+  
+  /* Toggle Panels */
+  .auth-container .toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: 0.6s ease-in-out;
+  }
+  
+  .auth-container .toggle-panel.toggle-left {
+    left: 0;
+    transition-delay: 1.2s;
+  }
+  
+  .auth-container .modal-box.active .toggle-panel.toggle-left {
+    left: -50%;
+    transition-delay: 0.6s;
+  }
+  
+  .auth-container .toggle-panel.toggle-right {
+    right: -50%;
+    transition-delay: 0.6s;
+  }
+  
+  .auth-container .modal-box.active .toggle-panel.toggle-right {
+    right: 0;
+    transition-delay: 1.2s;
+  }
+  
+  .auth-container .toggle-panel h2 {
+    font-size: 2.5em;
+    margin: 0 0 0.625em 0;
+  }
+  
+  .auth-container .toggle-panel p {
+    font-size: 0.75em;
+    margin-bottom: 1.9rem;
+  }
+  
+  .auth-container .toggle-panel button {
+    width: 9.375rem;
+    height: 3rem;
+    font-size: 1em;
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--accent-white);
+    border-radius: 0.625em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .auth-container .toggle-panel button:hover {
+    background-color: var(--accent-white);
+    color: var(--primary-color);
+  }
+  
+  /* Keyframes */
+  @keyframes pop {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

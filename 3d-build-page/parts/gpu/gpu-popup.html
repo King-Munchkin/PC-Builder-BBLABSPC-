@@ -1,0 +1,66 @@
+
+
+  <div class="popup-container">
+    <!-- Sidebar (Filter Section) -->
+    <div class="filter-sidebar">
+      <h2>Quick Add</h2>
+
+      <div class="filter-option">
+        <label><input type="checkbox" id="compatibility" checked /> Compatibility Filter</label>
+      </div>
+
+      <!-- Price Filter -->
+      <div class="filter-option">
+        <h3>Price</h3>
+        <input id="priceRange" type="range" min="0" max="3000" step="50" value="3000" />
+        <div class="range-values">
+          <span>₱0</span>
+          <span>₱<span id="priceLabel">3000</span></span>
+        </div>
+      </div>
+
+      <!-- Chipset Filter -->
+      <div class="filter-option">
+        <h3>Chipset</h3>
+        <div class="checkbox-list" id="chipsetFilters"></div>
+      </div>
+
+      <!-- Memory Type Filter -->
+      <div class="filter-option">
+        <h3>Memory Type</h3>
+        <div class="checkbox-list" id="memoryTypeFilters"></div>
+      </div>
+
+      <!-- Interface Filter -->
+      <div class="filter-option">
+        <h3>Interface</h3>
+        <div class="checkbox-list" id="interfaceFilters"></div>
+      </div>
+
+      <!-- Memory Size Filter -->
+      <div class="filter-option">
+        <h3>Memory Size (GB)</h3>
+        <div class="checkbox-list" id="memorySizeFilters"></div>
+      </div>
+
+      <!-- TDP Filter -->
+      <div class="filter-option">
+        <h3>TDP</h3>
+        <input id="tdpRange" type="range" min="50" max="500" step="10" value="500" />
+        <div class="range-values">
+          <span>50 W</span>
+          <span><span id="tdpLabel">500</span> W</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Section -->
+    <div class="product-display">
+      <div class="search-bar">
+        <input id="searchInput" placeholder="Search" type="text" />
+      </div>
+      <div id="gpuProductList" class="product-list"></div>
+    </div>
+  </div>
+
+

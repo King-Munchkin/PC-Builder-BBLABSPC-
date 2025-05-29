@@ -1,0 +1,64 @@
+
+<div class="popup-container">
+  <!-- Sidebar -->
+  <div class="filter-sidebar">
+    <h2>Quick Add</h2>
+
+    <div class="filter-option">
+      <label><input type="checkbox" id="compatibility" checked /> Compatibility Filter</label>
+    </div>
+
+    <div class="filter-option">
+      <h3>Price</h3>
+      <input id="priceRange" type="range" min="7.99" max="500" step="1" value="500" />
+      <div class="range-values">
+        <span>₱7.99</span>
+        <span>₱<span id="priceLabel">500</span></span>
+      </div>
+    </div>
+
+    <div class="filter-option">
+      <h3>Socket</h3>
+      <div class="checkbox-list" id="socketFilters"></div>
+    </div>
+
+    <div class="filter-option">
+      <h3>Microarchitecture</h3>
+      <div class="checkbox-list" id="microFilters"></div>
+    </div>
+
+    <div class="filter-option">
+      <h3>Integrated Graphics</h3>
+      <div class="checkbox-list" id="graphicsFilters"></div>
+    </div>
+
+    <div class="filter-option">
+      <h3>TDP</h3>
+      <input id="tdpRange" type="range" min="25" max="350" step="1" value="350" />
+      <div class="range-values">
+        <span>25 W</span>
+        <span><span id="tdpLabel">350</span> W</span>
+      </div>
+    </div>
+
+    <div class="filter-option">
+      <h3>Core Count</h3>
+      <input id="coreRange" type="range" min="2" max="64" step="1" value="64" />
+      <div class="range-values">
+        <span>2 Cores</span>
+        <span><span id="coreLabel">64</span> Cores</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Products -->
+  <div class="product-display">
+    <div class="search-bar">
+      <input id="searchInput" placeholder="Search" type="text" />
+    </div>
+    <div id="cpuProductList" class="product-list"></div> <!-- const productList = document.getElementById("productList");
+    -->
+  </div>
+</div>
+
+<script type="module" src="cpu-popup.js"></script>

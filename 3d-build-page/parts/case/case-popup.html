@@ -1,0 +1,53 @@
+<div class="popup-container">
+    <div class="filter-sidebar">
+      <h2>Quick Add</h2>
+  
+      <div class="filter-option">
+        <label><input type="checkbox" id="compatibility" checked /> Compatibility Filter</label>
+      </div>
+  
+      <div class="filter-option">
+        <h3>Price</h3>
+        <input id="priceRange" type="range" min="20" max="600" value="600" />
+        <div class="range-values">
+          <span>₱20</span>
+          <span>₱<span id="priceLabel">600</span></span>
+        </div>
+      </div>
+  
+      <div class="filter-option">
+        <h3>Form Factor</h3>
+        <div class="checkbox-list" id="formFactor"></div>
+      </div>
+  
+      <div class="filter-option">
+        <h3>Color</h3>
+        <div class="checkbox-list" id="color"></div>
+      </div>
+  
+      <div class="filter-option">
+        <h3>Weight</h3>
+        <input id="weightRange" type="range" min="1" max="25" value="25" />
+        <div class="range-values">
+          <span>1 kg</span>
+          <span><span id="weightLabel">25</span> kg</span>
+        </div>
+      </div>
+    </div>
+  
+    <div class="product-display">
+      <div class="search-bar">
+        <input id="searchInput" placeholder="Search" type="text" />
+      </div>
+      <div id="caseProductList" class="product-list"></div>
+    </div>
+  </div>
+
+  <script src="case-popup.js"></script>
+</body>
+
+
+
+  
+
+  

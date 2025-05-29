@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BBUILDS-LABPC</title>
+  
+  <link href="build.css" rel="stylesheet" />
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Jersey+25&amp;display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="pinkOverlay" class="pink-overlay"></div>
+  <div id="login-modal-placeholder" class="login-placeholder"></div>
+
+  <div class="page-container">
+    <!-- Header -->
+    <div class="header-container">
+      <h1 class="page-title">
+        <a href="../frontend/public/user.html" style="text-decoration: none; color: inherit;">BBUILDS-LABPC</a>
+      </h1>
+      
+      <div class="header-actions">
+        <button id="saveBuildButton" class="save-build-button">Save Build</button>
+        <button class="create-build-button">Create New Build</button>
+        <div class="build-title-dropdown">
+          <button class="build-title-button">
+            <span class="build-title-text">PC Build Title</span>
+          </button>
+          <ul id="saved-builds-dropdown" class="build-dropdown" style="display:none;">
+        </div>
+      </div>
+    </div>
+   
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Info Cards Section -->
+      <div class="info-cards-container">
+        <div class="build-cost-card">
+          <p class="build-cost-label">Total Cost</p>
+          <p class="build-cost-value" id="totalCost">Price</p>
+        </div>
+
+        <div class="compatibility-card">
+          <p class="compatibility-label">System Compatibility</p>
+          <p class="compatibility-status" id="compatibilityStatus">Compatible</p>
+        </div>
+
+        <div class="power-usage-card">
+          <p class="power-usage-label">Estimated Power Usage</p>
+          <p class="power-usage-value" id="powerUsage">Watts</p>
+        </div>
+      </div>
+
+      <!-- Viewer & Part Selection Section -->
+      <div class="viewer-and-part-selector-container">
+        <!-- 3D Viewer Container -->
+        <div class="viewer-container">
+          <!-- Camera Control Message -->
+        
+          <div id="viewer3D" class="viewer-display"></div>
+        </div>
+        
+
+        <!-- Part Selector Container -->
+        <div class="toggle-parts-border">
+        <div class="toggle-parts-container">
+          <h3 class="toggle-parts-title">Parts List</h3>
+
+          <!-- Part Containers (CPU, Motherboard, etc.) -->
+          <div class="part-container">
+            <div class="part-label-and-button">
+              <img src="3D.png" alt="3D Model" class="model-logo" />
+              <h4 class="part-label">Case</h4>
+             
+              <button class="part-add-button" data-part="case">Add Case</button>
+            </div>
+            <div id="selectedCaseCard" class="selected-card-container"></div>
+          </div>
+
+          <div class="part-container">
+            <div class="part-label-and-button">
+              <h4 class="part-label">CPU</h4>
+              <button class="part-add-button" data-part="cpu">Add CPU</button>
+            </div>
+            <div id="selectedCpuCard" class="selected-card-container"></div>
+          
+
+          </div>
+
+          <div class="part-container">
+            <div class="part-label-and-button">
+              <img src="3D.png" alt="3D Model" class="model-logo" />
+              <h4 class="part-label">Motherboard</h4>
+              
+              <button class="part-add-button" data-part="mobo">Add Motherboard</button>
+            </div>
+            <div id="selectedMoboCard" class="selected-card-container"></div>
+          </div>
+
+          <div class="part-container">
+            <div class="part-label-and-button">
+              <img src="3D.png" alt="3D Model" class="model-logo" />
+              <h4 class="part-label">GPU</h4>
+              <button class="part-add-button" data-part="gpu">Add GPU</button>
+            </div>
+            <div id="selectedGpuCard" class="selected-card-container"></div>
+          </div>
+
+          <div class="part-container">
+            <div class="part-label-and-button">
+              <img src="3D.png" alt="3D Model" class="model-logo" />
+              <h4 class="part-label">RAM</h4>
+              <button class="part-add-button" data-part="ram">Add RAM</button>
+            </div>
+            <div id="selectedRamCard" class="selected-card-container"></div>
+          </div>
+
+          <div class="part-container">
+            <div class="part-label-and-button">
+              <img src="3D.png" alt="3D Model" class="model-logo" />
+              <h4 class="part-label">CPU Cooler</h4>
+              <button class="part-add-button" data-part="cooler">Add CPU Cooler</button>
+            </div>
+            <div id="selectedCoolerCard" class="selected-card-container"></div>
+          </div>
+
+          <div class="part-container">
+            <div class="part-label-and-button">
+              <h4 class="part-label">Storage</h4>
+              <button class="part-add-button" data-part="storage">Add Storage</button>
+            </div>
+            <div id="selectedStorageCard" class="selected-card-container"></div>
+          </div>
+
+          <div class="part-container">
+            <div class="part-label-and-button">
+              <h4 class="part-label">Power Supply</h4>
+              <button class="part-add-button" data-part="psu">Add Power Supply</button>
+            </div>
+            <div id="selectedPsuCard" class="selected-card-container"></div>
+          </div>
+
+          <div class="part-container">
+            <div class="part-label-and-button">
+              <h4 class="part-label">Case Fan</h4>
+              <button class="part-add-button" data-part="fans">Add Case Fan</button>
+            </div>
+            <div id="selectedFansCard" class="selected-card-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="modalContainer" class="popup-overlay hidden">
+    <div class="modal-content" id="modalContent">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div id="modal-inner-content"></div>
+    </div>
+  </div>
+
+  <button id="floatingOrderButton" class="floating-order-btn">
+     Order
+  </button>
+
+  <script src="build.js" type="module"></script>
+  <script src="saved.js" type="module" id="savedScript"></script>
+  <script src="login-modal.js" type="module" id="loginModalScript"></script>
+
+  <script src="load.js" type="module"></script>
+  
+  <script src="cart.js" type="module"></script>
+  <script src="build-manager.js" type="module"></script>
+
+ 
+  <script>
+    // Trigger the pink overlay animation on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        showPinkOverlay();
+    });
+
+    // Function to show the pink overlay
+    function showPinkOverlay() {
+        const overlay = document.getElementById('pinkOverlay');
+        overlay.style.animation = 'dispersingAnimation 1s forwards';  // Trigger the animation
+        overlay.style.opacity = 1;  // Make it visible
+    }
+  </script>
+
+</body>
+</html>
