@@ -1,0 +1,67 @@
+Lawrence Changelogs for proof na may ginawa
+
+Changelogs fix V0.1
+
+
+April 20
+
+Edited load.js
+-Make popups a module
+
+Changed popups.js
+- Added fix for removing
+- Added import for product.js
+
+Added load products.js on build.html bottom script
+- OK CHANGE OF PLAN JUST DIRECTED NOW
+
+Added PCIe filter on mobo.html
+
+Added build-manager.js
+- For changing price, compatibility, and tdp on build.html
+- Fixed compatibility for all sockets
+
+
+April 26
+Changelogs Fixes V1:
+- case popup
+- cooler popup
+- cpu popup
+- gpu popup
+- motherboard popup
+- fixed all popup.js
+- added build-manager.js for computing
+- completed saved/load/createnew builds
+
+May 02
+Changelogs Fixes V2:
+- Fixed signup/login
+- Created backend for admin/accounts
+- Fixed orders/trackings page
+- Added more logic for frontend(whoever made this shall suffer)
+- Fixes for load/save based on accounts
+
+May 15
+Changelogs Fixes V3:
+- Final fix for Compatibility checkers
+- Completed backend?
+
+May 17
+Changelogs Fixes V4:
+- Fixed modal logic, login/signup while on build.html
+- Updated the landing page
+- Hashed passwords.
+- Updated the new tracking page
+- ADDED FORGOTTEN BACKEND LOGIC: After ordering, stocks of the item will be decreased
+
+
+May 18
+Changelogs blabla
+- Fixed logic for view-order
+- Fixed save/load on build
+- Fixed admin checkboxes
+
+
+May 19
+Final Changes
+-Fixed popups price sliders

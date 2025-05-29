@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Survey</title>
+  <head>
+    <link rel="stylesheet" href="qna.css">
+  </head>
+</head>
+<body>
+  <div class="blob" id="mouseBlob"></div>
+  <div class="blob" style="top: 10%; left: 20%; animation-duration: 25s;"></div>
+  <div class="blob" style="top: 50%; left: 60%; animation-duration: 30s;"></div>
+  <div class="blob" style="top: 70%; left: 30%; animation-duration: 40s;"></div>
+
+  <div class="form-container">
+    <div class="back-arrow" id="backArrow">&#8592; Back</div>
+
+    <form class="questionnaire" id="pcForm">
+      <h2>What will you use a computer for?</h2>
+      <label><input type="checkbox" name="use" value="Gaming"> Gaming</label>
+      <label><input type="checkbox" name="use" value="Work"> Work</label>
+      <label><input type="checkbox" name="use" value="Personal"> Personal Use</label>
+      <label><input type="checkbox" name="use" value="Video Editing"> Video Editing</label>
+      <label><input type="checkbox" name="use" value="Entertainment"> Entertainment</label>
+      <label><input type="checkbox" name="use" value="School"> School</label>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="recommendationBox" class="recommendation-box">
+      <button class="go-build-button" id="goBuild">Go Build</button>
+    </div>
+  </div>
+
+  <script src="qna.js"></script>
+</body>
+</html>
