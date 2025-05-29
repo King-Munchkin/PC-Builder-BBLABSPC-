@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin</title>
+
+		<link rel="stylesheet" href="../components/admin-header/admin-header.css">
+		<link rel="stylesheet" href="../styles/admin-dashboard.css" />
+		<link rel="stylesheet" href="../components/footer/footer.css">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+	</head>
+	<body>
+		<div id="header-placeholder"></div>
+
+		<section class="admin">
+			<div class="page-title">
+				<h1>Your Products</h1>
+			</div>
+
+			<div class="product-admin-controls">
+				<div class="part-list">
+					<div class="section-title">
+						<h2>Your Parts List</h2>
+					</div>
+					<h3>Filter</h3>
+					<hr />
+					<div class="price-container">
+						<h4>PRICE</h4>
+						<div class="price-value">
+							<span id="min-price">$0</span>
+							<span id="current-price">$1000000</span>
+						</div>
+						<input id="price-range" class="price-range" type="range" min="0" max="100000000" value="100000000" step="50"/>
+					</div>
+
+					<div class="parts-selection">
+						<h4>COMPONENTS</h4>
+						<label>
+							<input id="case" class="component-checkbox" type="checkbox" name="part-type" value="case" />
+							Case
+						</label>
+						<label>
+							<input id="cpu" class="component-checkbox" type="checkbox" name="part-type" value="cpu" />
+							CPU
+						</label>
+						<label>
+							<input id="mobo" class="component-checkbox" type="checkbox" name="part-type" value="mobo" />
+							Motherboard
+						</label>
+						<label>
+							<input id="memory" class="component-checkbox" type="checkbox" name="part-type" value="memory" />
+							Memory
+						</label>
+						<label>
+							<input id="storage" class="component-checkbox" type="checkbox" name="part-type" value="storage" />
+							Storage
+						</label>
+						<label>
+							<input id="gpu" class="component-checkbox" type="checkbox" name="part-type" value="gpu" />
+							Graphics Card
+						</label>
+						<label>
+							<input id="case-fans" class="component-checkbox" type="checkbox" name="part-type" value="case-fans" />
+							Case Fans
+						</label>
+						<label>
+							<input id="cooler" class="component-checkbox" type="checkbox" name="part-type" value="cooler" />
+							Coolers
+						</label>
+						<label>
+							<input id="psu" class="component-checkbox" type="checkbox" name="part-type" value="psu" />
+							Powersupply
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="product-list-container">
+				<div class="sub-container">
+					<div class="product-section">
+						<h2>Number of Products</h2>
+					</div>
+					<hr />
+
+					<div class="product-toolbar">
+						
+						<div class="product-edit-actions">
+							<button class="btn-delete">Delete</button>
+
+
+
+							<button class="add-product">+ ADD New Product/s</button>
+						</div>
+					</div>
+
+					<div class="products-list">
+						<table class="product-table">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Name</th>
+									<th>Stock</th>
+									<th>Price</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody id="product-table-body"></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div id	="footer-placeholder"></div>
+
+		<script src="../components/admin-header/admin-header.js"></script>
+		<script src="../components/footer/footer.js"></script>
+		<script src="../scripts/adminProductList.js"></script>
+	</body>
+</html>

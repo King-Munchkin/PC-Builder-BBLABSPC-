@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Orders</title>
+  <link rel="stylesheet" href="CSS Folder/view-orders.css" />
+  <link rel="stylesheet" href="../frontend/src/components/user-header/user-header.css" />
+  <link rel="stylesheet" href="../frontend/src/components/footer/footer.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <div class="orders-page">
+    <div class="order-tabs">
+      <button class="order-tab active" data-id="order1">Order #1001</button>
+      <button class="order-tab" data-id="order2">Order #1002</button>
+      <button class="order-tab" data-id="order3">Order #1003</button>
+    </div>
+
+    <div class="order-details">
+      <div id="order1" class="order-content active">
+        <div class="order-summary">
+          <h2>Order #1001</h2>
+          <p><strong>Order Date:</strong> 2025-05-10</p>
+
+          <!-- Order Status -->
+          <div class="status-bar">
+            <div class="status-step active">
+              <span class="label">Order Confirmed</span>
+              <div class="status-dot green"></div>
+              <span class="date" id="order-confirmed-date">Sun, 10th May</span>
+            </div>
+            <div class="status-step active">
+              <span class="label">Shipped</span>
+              <div class="status-dot green"></div>
+              <span class="date" id="shipped-date">Tue, 12th May</span>
+            </div>
+            <div class="status-step active">
+              <span class="label">Out For Delivery</span>
+              <div class="status-dot green"></div>
+              <span class="date" id="out-for-delivery-date">Thu, 14th May</span>
+            </div>
+            <div class="status-step active">
+              <span class="label">Delivered</span>
+              <div class="status-dot green"></div>
+              <span class="date" id="delivered-date">Fri, 15th May</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-items">
+          <div class="order-item">
+            <img src="images/ryzen5600x.jpg" alt="Ryzen 5 5600X" class="item-image" />
+            <div class="item-details">
+              <div class="item-name">Ryzen 5 5600X</div>
+              <div class="item-meta">Qty: 1</div>
+              <div class="item-price">$199.99</div>
+            </div>
+          </div>
+          
+          <div class="order-item">
+            <img src="images/msi-b550.jpg" alt="MSI B550 Tomahawk" class="item-image" />
+            <div class="item-details">
+              <div class="item-name">MSI B550 Tomahawk</div>
+              <div class="item-meta">Qty: 1</div>
+              <div class="item-price">$159.99</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="delivery-container">
+          <p><strong>Delivery:</strong> 123 Main St, Cityville</p>
+        </div>
+        <div class="total-container">
+          <p><strong>Total:</strong> $359.98</p>
+        </div>
+      </div>
+
+      <div id="order2" class="order-content">
+        <div class="order-summary">
+          <h2>Order #1002</h2>
+          <p><strong>Date:</strong> 2025-05-12</p>
+          <p><strong>Status:</strong> Processing</p>
+
+          <!-- Order Status -->
+          <div class="status-bar">
+            <div class="status-step active">
+              <span class="label">Order Confirmed</span>
+              <div class="status-dot green"></div>
+              <span class="date" id="order-confirmed-date">Tue, 12th May</span>
+            </div>
+            <div class="status-step active">
+              <span class="label">Shipped</span>
+              <div class="status-dot green"></div>
+              <span class="date" id="shipped-date">Thu, 14th May</span>
+            </div>
+            <div class="status-step">
+              <span class="label">Out For Delivery</span>
+              <div class="status-dot gray"></div>
+              <span class="date" id="out-for-delivery-date">--</span>
+            </div>
+            <div class="status-step">
+              <span class="label">Delivered</span>
+              <div class="status-dot gray"></div>
+              <span class="date" id="delivered-date">--</span>
+            </div>
+          </div>
+        </div>
+
+        <h3>Items:</h3>
+        <ul>
+          <li>RTX 4070 - Qty: 1 - $599.99</li>
+          <li>750W PSU - Qty: 1 - $89.99</li>
+        </ul>
+        
+        <div class="delivery-container">
+          <p><strong>Delivery:</strong> 456 Tech Rd, Buildtown</p>
+        </div>
+        <div class="total-container">
+          <p><strong>Total:</strong> $689.98</p>
+        </div>
+      </div>
+
+      <div id="order3" class="order-content">
+        <div class="order-summary">
+          <h2>Order #1003</h2>
+          <p><strong>Date:</strong> 2025-05-14</p>
+          <p><strong>Status:</strong> Shipped</p>
+
+          <!-- Order Status -->
+          <div class="status-bar">
+            <div class="status-step active">
+              <span class="label">Order Confirmed</span>
+              <div class="status-dot green"></div>
+              <span class="date" id="order-confirmed-date">Thu, 14th May</span>
+            </div>
+            <div class="status-step active">
+              <span class="label">Shipped</span>
+              <div class="status-dot green"></div>
+              <span class="date" id="shipped-date">Sat, 16th May</span>
+            </div>
+            <div class="status-step">
+              <span class="label">Out For Delivery</span>
+              <div class="status-dot gray"></div>
+              <span class="date" id="out-for-delivery-date">--</span>
+            </div>
+            <div class="status-step">
+              <span class="label">Delivered</span>
+              <div class="status-dot gray"></div>
+              <span class="date" id="delivered-date">--</span>
+            </div>
+          </div>
+        </div>
+
+        <h3>Items:</h3>
+        <ul>
+          <li>1TB NVMe SSD - Qty: 1 - $129.99</li>
+        </ul>
+        
+        <div class="delivery-container">
+          <p><strong>Delivery:</strong> 789 PC Ln, BuilderCity</p>
+        </div>
+        <div class="total-container">
+          <p><strong>Total:</strong> $129.99</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer-placeholder"></div>
+  <script src="../frontend/src/components/user-header/user-header.js"></script>
+  <script src="view-orders.js"></script>
+<script src="../frontend/src/components/footer/footer.js"></script>
+  
+</body>
+</html>

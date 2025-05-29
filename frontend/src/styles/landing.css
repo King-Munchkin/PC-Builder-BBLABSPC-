@@ -1,0 +1,247 @@
+:root {
+	--primary-color: #010102;
+	--secondary-color: #09090f;
+	--tertiary-color: #1a1a28;
+	--accent-white: #d9d9d9;
+	--accent-purple: #9b59b6;
+	--text-color: #ffffff;
+	--background-color: #ffffff;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Jersey 25", sans-serif;
+	background-color: var(--background-color);
+	color: var(--primary-color);
+	min-width: 300px;
+	overflow: auto;
+}
+
+body::-webkit-scrollbar {
+	width: 0.625rem;
+	height: 0.625rem;
+}
+
+body::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: var(--accent-white);
+	height: 0.625rem;
+}
+
+.hero {
+	background-color: var(--background-color);
+	height: 700px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+	padding: 0 5.5rem;
+}
+
+.hero h2 {
+	background-color: var(--primary-color);
+	color: var(--text-color);
+	font-size: 3rem;
+	padding: 1rem 0 0 1rem;
+}
+
+.slider-container {
+	height: 550px;
+	background-color: var(--primary-color);
+	display: flex;
+	justify-content: center;
+	padding: 1rem 1rem 1rem 1rem;
+}
+
+.slider-container .slider-wrapper {
+	width: 1200px;
+	max-width: 100vw;
+	height: 100%;
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.slider-wrapper .slider {
+	height: 100%;
+	width: max-content;
+	top: 0;
+	left: 0;
+	display: flex;
+	position: absolute;
+	transition: left 0.5s ease-in-out;
+}
+
+.slider-wrapper .slider img {
+	width: 1300px;
+	max-width: 100vw;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slider-wrapper .bullets {
+	position: absolute;
+	bottom: 10px;
+	color: #fff;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;	
+}
+
+.slider-wrapper .bullets li {
+	list-style: none;
+	width: 10px;
+	height: 10px;
+	background-color: white;
+	margin: 1.25rem;
+	border-radius: 1.25em;
+	transition: 1s;
+}
+
+.slider-wrapper .bullets li.active {
+	width: 1.875rem;
+}
+
+/*new arrivals section*/
+.new-arrivals-container {
+	background-color: var(--primary-color);
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+	padding: 3rem 5.5rem;
+}
+
+.new-arrivals-container > h2 {
+	color: var(--text-color);
+	font-size: 3em;
+	padding: 1rem 0 0 1rem;
+	margin-bottom: 1rem;
+}
+
+.new-arrivals-container .product-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.product-container .product-wrapper {
+	width: 100%;
+	max-width: 1300px;
+	padding: 0 2rem;
+	overflow: hidden;
+}
+
+.product-wrapper .product-list{
+	margin-bottom: 1rem;
+}
+
+.product-list img{
+	align-self: center;
+	width: 100%;
+	aspect-ratio: 3 / 2;
+	object-fit: cover;
+	border-radius: 0.625em;
+	margin-bottom: 1rem;
+}
+
+.product-wrapper .swiper-pagination-bullet {
+	height: 12px;
+	width: 12px;
+	background-color: var(--accent-purple);
+	opacity: 0.6;
+}
+
+.product-wrapper .swiper-pagination-bullet-active,
+.product-wrapper .swiper-pagination-bullet:hover {
+	opacity: 1;
+}
+
+.product-wrapper .swiper-slider-button {
+	color: var(--accent-purple);
+	opacity: 0.6;
+}
+
+.product-wrapper .swiper-slider-button:hover {
+	color: var(--accent-purple);
+	opacity: 1;
+}
+
+/*Build 3D PC section*/
+.build3d-section{
+	width: 100%;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 5.5rem;
+}
+
+
+.build3d-section .content-container{
+	width: 100%;
+	height: 300px;
+	background-color: var(--primary-color);
+	color: var(--text-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 3rem;
+}
+
+.content-container img {
+	width: 250px;
+	filter: drop-shadow(0 8px 16px rgba(255, 255, 255, 0.5));
+}
+
+.image {
+	background-color: transparent;
+	padding: 1rem;
+}
+
+.content-container .details h2{
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.content-container .details p{
+	margin-bottom: 1rem;
+}
+
+.content-container .details p:nth-child(3){
+	margin-bottom: 1.5rem;
+}
+
+.content-container .details a{
+	background-color: white;
+	color: var(--primary-color);
+	width: 5rem;
+	padding: 0.5em;
+	border-radius: 0.625em;
+	cursor: pointer;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.content-container .details a:hover{
+	background-color: var(--accent-purple);
+	color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+	.card-wrapper .swiper-slider-button {
+		display: none;
+	}
+}			

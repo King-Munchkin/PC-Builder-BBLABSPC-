@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+		<link href="https://fonts.googleapis.com/css2?family=Jersey+25&amp;display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../src/styles/admin.css">
+	</head>
+	<body>	
+    <section class="login-container">
+      <div class="website-name">
+        <h1>BBUILDS-LABPC</h1>
+        <p>Welcome back, Admin! Please login to continue managing your site.</p>
+      </div>
+      <div class="form-container">
+        <form id="login-form" class="form">
+          <h2>Login</h2>
+          <input id="username" type="text" name="login_username" placeholder="Username" required /> <br />
+          <input id="password" type="password" name="login_password" placeholder="Password" required /> <br>
+          <p id="error-message" class="error-message"></p>
+          <button id="btn-login-submit"  class="btn-login-submit">Login</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="../src/scripts/admin.js"></script>
+	</body>
+</html>

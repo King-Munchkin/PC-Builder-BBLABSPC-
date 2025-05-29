@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Admin</title>
+
+		<link rel="stylesheet" href="../components/admin-header/admin-header.css" />
+		<link rel="stylesheet" href="../styles/admin-addProduct.css" />
+		<link rel="stylesheet" href="../components/footer/footer.css" />
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+	</head>
+	<body>
+		<div id="header-placeholder"></div>
+
+		<section class="admin">
+			<div class="page-title">
+				<h1>Your Products</h1>
+			</div>
+
+			<div class="product-admin-controls">
+				<div class="part-list">
+					<div class="section-title">
+						<h2>Add New Products</h2>
+					</div>
+					<h3>Filter</h3>
+					<hr />
+
+					<div class="parts-selection">
+						<h4>COMPONENTS</h4>
+						<label>
+							<input id="case" class="component-checkbox" type="checkbox" name="part-type" value="case" />
+							Case
+						</label>
+						<label>
+							<input id="cpu" class="component-checkbox" type="checkbox" name="part-type" value="cpu" />
+							CPU
+						</label>
+						<label>
+							<input id="mobo" class="component-checkbox" type="checkbox" name="part-type" value="mobo" />
+							Motherboard
+						</label>
+						<label>
+							<input id="memory" class="component-checkbox" type="checkbox" name="part-type" value="memory" />
+							Memory
+						</label>
+						<label>
+							<input id="storage" class="component-checkbox" type="checkbox" name="part-type" value="storage" />
+							Storage
+						</label>
+						<label>
+							<input id="gpu" class="component-checkbox" type="checkbox" name="part-type" value="gpu" />
+							Graphics Card
+						</label>
+						<label>
+							<input id="case-fans" class="component-checkbox" type="checkbox" name="part-type" value="case-fans" />
+							Case Fans
+						</label>
+						<label>
+							<input id="cooler" class="component-checkbox" type="checkbox" name="part-type" value="cooler" />
+							Coolers
+						</label>
+						<label>
+							<input id="psu" class="component-checkbox" type="checkbox" name="part-type" value="psu" />
+							Powersupply
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="add-product-container">
+				<div class="sub-container">
+					<div class="product-edit-actions">
+						<button class="view-product-list">View Product List</button>
+					</div>
+
+					<div id="form-wrapper" class="form-wrapper"></div>
+
+					<div class="product-edit-actions">
+						<button class="add-product">Add Product/s</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div id="footer-placeholder"></div>
+
+		<script src="../components/admin-header/admin-header.js"></script>
+		<script src="/frontend/src/components/footer/footer.js"></script>
+		<script src="../scripts/adminAddProduct.js"></script>
+		<script src="../scripts/adminProductList.js"></script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+:root {
+	--primary-color: #010102;
+	--secondary-color: #09090f;
+	--tertiary-color: #1a1a28;
+	--accent-white: #d9d9d9;
+	--accent-purple: #9b59b6;
+	--text-color: #ffffff;
+	--background-color: #ffffff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Jersey 25", sans-serif;
+}
+
+footer{
+  background-color: var(--primary-color);
+  height: 150px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 1.5rem;
+}
+
+footer > hr{
+  width: 100%;
+  max-width:1100px;
+  height: 1px;
+  border: none;
+  background-color: var(--background-color);
+  opacity: .3;
+}
+
+footer p{
+  margin-top: 1.25rem;
+  color: var(--text-color);
+}

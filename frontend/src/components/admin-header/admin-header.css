@@ -1,0 +1,88 @@
+:root {
+	--primary-color: #010102;
+	--secondary-color: #09090f;
+	--tertiary-color: #1a1a28;
+	--accent-white: #d9d9d9;
+	--accent-purple: #9b59b6;
+	--text-color: #ffffff;
+	--background-color: #ffffff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Jersey 25", sans-serif;
+}
+
+header {
+	background-color: var(--primary-color);
+	color: var(--text-color);
+}
+
+.header {
+	height: 4.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 5.5rem;
+}
+
+.header .website-identity {
+	display: flex;
+	justify-content: center;
+  align-items: center;
+}
+
+.website-identity img{
+	filter: invert(100%);
+}
+
+.website-identity h1 {
+	font-size: 2rem;
+}
+
+.action h2 {
+	font-size: 2rem;
+  font-weight: 600;
+  padding-right: 2em;
+  border-right: 1px solid white;
+  margin-right: 2em;
+}
+
+.admin-action {
+	display: flex;
+	align-items: center;
+}
+
+.admin-action h2{
+  font-size: 2rem;
+  font-weight: 600;
+  padding-right: 2em;
+  border-right: 1px solid var(--background-color);
+  margin-right: 2em;
+}
+
+.logout-btn {
+  font-size: 1.2rem;
+	color: var(--text-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+  gap: 10px;
+	width: 5rem;
+	cursor: pointer;
+}
+
+.logout-btn:hover {
+	color: var(--accent-purple);
+}
+
+.logout-btn img {
+	width: 30px;
+	height: 30px;
+	background: var(--accent-white);
+	border-radius: 50%;
+	padding: 8px;
+}

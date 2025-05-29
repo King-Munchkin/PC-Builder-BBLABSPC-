@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Header</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+		<link href="https://fonts.googleapis.com/css2?family=Jersey+25&amp;display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<div class="main-header">
+				<img src="/frontend/src/assets/images/square-box-32.png" alt="" />
+				<h1><a class="webpage-name" href="/frontend/public/user.html">BBUILDS-LABPC</a></h1>
+
+				<div id="auth-buttons" class="auth-buttons">
+					<button id="open-btn-login" class="btn-login">Login</button>
+					<button id="open-btn-signup" class="btn-signup">Sign Up</button>
+				</div>
+
+				<nav id="user-nav" class="user-nav">
+					<ul>
+						<li>
+							<a href="../../../../order-page/view-orders.html" class="profile-menu-link"> My Orders/s </a>
+						</li>
+					</ul>
+					<img class="profile profile-icon" src="/frontend/src/assets/images/profile.svg" alt="user-profile" />
+					<div class="drop-down-sign profile-icon">
+						<span class="profile-icon">&gt;</span>
+					</div>
+
+					<div id="profile-menu" class="profile-menu-wrap">
+						<div class="profile-menu">
+							<div class="user-info">
+								<img src="/frontend/src/assets/images/profile.svg" alt="user-profile" />
+								<h2 id="user-display-name">NAME HERE</h2>
+							</div>
+							<hr />
+
+							<a class="profile-menu-link logout-btn">
+								<img src="/frontend/src/assets/images/logout-icon.svg" />
+								<p>Logout</p>
+								<span>&gt;</span>
+							</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+
+			<div class="sub-header">
+				<nav>
+					<ul>
+						<li><a href="../../../3d-build-page/startup.html">BUILDER</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<link rel="stylesheet" href="login-modal.css">
+
+<div id="auth-container" class="auth-container">
+  <div class="modal-box">
+    <div class="form-container login-content">
+      <span id="btn-close-login" class="btn-close-login">&times;</span>
+      <div class="main-content login">
+        <form id="login-form" class="form">
+          <h2>Login</h2>
+          <input id="login-username" type="text" name="login_username" placeholder="Username" required /> <br />
+          <input id="login-password" type="password" name="login_password" placeholder="Password" required />
+          <a href="#" class="forgot-link">Forgot password?</a>
+          <button class="btn-login-submit" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="form-container signup-content">
+      <span id="btn-close-signup" class="btn-close-signup">&times;</span>
+      <div class="main-content signup">
+        <form id="signup-form" class="form">
+          <h2>Sign Up</h2>
+          <input id="signup-username" type="text" name="signup_username" placeholder="Username" required /> <br />
+          <input id="signup-email" type="email" name="signup_email" placeholder="Email" required /> <br />
+          <input id="signup-password" type="password" name="signup_password" placeholder="Password" required /> <br />
+          <button class="btn-signup-submit" type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="toggle-box">
+      <div class="toggle-panel toggle-left">
+        <h2>Hello, Welcome!</h2>
+        <p>Don't have an account?</p>
+        <button class="btn-toggle-signup">Sign Up</button>
+      </div>
+      <div class="toggle-panel toggle-right">
+        <h2>Welcome Back!</h2>
+        <p>Already have an account?</p>
+        <button class="btn-toggle-login">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src ="../frontend/src/components/user-header/user-header.js" type="module"></script>
+
+	</body>
+</html>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		// Retrieve the username from localStorage
+		const username = localStorage.getItem("username");
+
+		// If a username exists, update the profile name
+		if (username) {
+			const userNameElement = document.getElementById("user-name");
+			userNameElement.textContent = username; // Update the text content
+		}
+	});
+</script>
+
+

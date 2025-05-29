@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BBUILDLABSPC</title>
+
+		<!-- Linking Google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+		<link href="https://fonts.googleapis.com/css2?family=Jersey+25&amp;display=swap" rel="stylesheet" />
+
+		<!-- CSS Links -->
+		<link rel="stylesheet" href="../src/styles/landing.css" />
+		<link rel="stylesheet" href="../src/components/user-header/user-header.css" />
+		<link rel="stylesheet" href="../src/components/footer/footer.css">
+
+		<!-- Linking SwiperJS CSS-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	</head>
+	<body>
+		<div id="header-placeholder"></div>
+
+		<section class="hero">
+			<h2>SULIT-DEALS</h2>
+			<div class="slider-container">
+				<div class="slider-wrapper">
+					<div class="slider">
+						<div class="item" style="--position: 1"><img src="../src/assets/images/landing-1.jpg" alt="" /></div>
+						<div class="item" style="--position: 2"><img src="../src/assets/images/landing-2.jpg" alt="" /></div>
+						<div class="item" style="--position: 3"><img src="../src/assets/images/landing-3.jpeg" alt="" /></div>
+						<div class="item" style="--position: 5"><img src="../src/assets/images/landing-5.jpg" alt="" /></div>
+					</div>
+
+					<ul class="bullets">
+						<li class="active"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="new-arrivals-container">
+			<h2>NEW ARRIVALS</h2>
+			<div class="product-container swiper">
+				<div class="product-wrapper">
+					<ul class="product-list swiper-wrapper" id="product-list">
+						<li class="swiper-slide"><img src="../src/assets/images/ram.jpg" alt=""></li>
+						<li class="swiper-slide"><img src="../src/assets/images/gpu.jpg" alt=""></li>
+						<li class="swiper-slide"><img src="../src/assets/images/cpu.jpg" alt=""></li>
+						<li class="swiper-slide"><img src="../src/assets/images/mobo.jpg" alt=""></li>
+					</ul>
+
+					<div class="swiper-pagination"></div>
+					<div class="swiper-slider-button swiper-button-prev"></div>
+					<div class="swiper-slider-button swiper-button-next"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="build3d-section">
+			<div class="content-container">
+				<div class="image">
+					<img src="../src/assets/images/pc.png" alt="3D PC build" />
+				</div>
+
+				<div class="details">
+					<h2>Bring Your Dream PC to Life in 3D</h2>
+					<p>Visualize your custom build before buying. Our 3D PC Builder lets you mix and match real components,</p>
+					<p>see how they fit together, and ensure compatibility—so you build smarter, not harder.</p>
+					<a href="../../3d-build-page/startup.html" class="btn-start-building">Start Building</a>
+				</div>
+			</div>
+		</section>
+
+		<div id="footer-placeholder"></div>
+
+		<!--- JavaScript Links -->
+		<!---->
+		<script> window.accountId = "1"; </script>
+    <script src="../src/components/user-header/user-header.js"></script>
+		<script src="../src/scripts/landing.js"></script>
+		<script src="../src/components/footer/footer.js"></script>
+
+		
+		<!-- Linking SwiperJS Script-->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<!-- Script for New Arrivals Swiper -->
+		<script src="../src/scripts/newArrivalsSlider.js"></script>
+	</body>
+</html>
+
+

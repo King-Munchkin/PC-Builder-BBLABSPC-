@@ -1,0 +1,246 @@
+:root {
+	--primary-color: #010102;
+	--secondary-color: #09090f;
+	--tertiary-color: #1a1a28;
+	--accent-white: #d9d9d9;
+	--accent-purple: #9b59b6;
+	--text-color: #ffffff;
+	--background-color: #ffffff;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Jersey 25", sans-serif;
+	background-color: var(--tertiary-color);
+	color: var(--text-color);
+	min-width: 300px;
+}
+
+body::-webkit-scrollbar {
+	width: 0.625rem;
+	height: 0.625rem;
+}
+
+body::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: var(--accent-white);
+	height: 0.625rem;
+}
+
+.admin {
+	background-color: var(--background-color);
+	color: var(--primary-color);
+	display: grid;
+	grid-template-columns: minmax(300px, 400px) 2fr;
+	grid-template-rows: auto;
+}
+
+.admin .page-title {
+	width: 100%;
+	height: 96px;
+	background-color: var(--accent-white);
+	color: var(--primary-color);
+	display: grid;
+	place-items: center;
+	grid-column: 1 / span 2;
+}
+
+.admin .page-title h1 {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.admin .product-admin-controls {
+	max-height: 700px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	grid-column: 1;
+	grid-row: 2;
+	padding: 2em 0 2em 5.5em;
+	position: sticky;
+	top: 0;
+}
+
+.product-admin-controls .part-list {
+	width: 100%;
+	height: 100%;
+	border-radius: 1.25em;
+	padding: 1em;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.part-list .section-title {
+	width: 100%;
+	background-color: rgb(210, 209, 209);
+	padding: 1rem;
+	margin-bottom: 1.75em;
+	border-radius: 1.25em;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.part-list .section-title h2 {
+	padding: 0.5em;
+	border: 1px solid black;
+	border-radius: 0.625em;
+	text-align: center;
+}
+
+.part-list h3 {
+	font-size: 1.2rem;
+	margin: 0.625em 0 0.625em 0;
+}
+
+.part-list hr {
+	width: 100%;
+	height: 1px;
+	background-color: var(--primary-color);
+	border: 0;
+	opacity: 0.5;
+}
+
+.parts-selection {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	max-width: 200px;
+	margin: 20px 0;
+}
+
+.parts-selection H4 {
+	font-weight: bold;
+	margin-bottom: 0.625em;
+}
+
+.parts-selection label {
+	display: inline-flex;
+	align-items: center;
+	font-size: 18px;
+	cursor: pointer;
+	color: var(--primary-color);
+}
+
+.parts-selection input[type="checkbox"] {
+	width: 18px;
+	height: 18px;
+	margin-right: 18px;
+}
+
+.add-product-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	grid-column: 2;
+	grid-row: 2;
+	padding: 2em 5.5em 2em 2em;
+}
+
+.add-product-container .sub-container {
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+	padding: 1em;
+	border-radius: 1.25em;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+	overflow-y: auto;
+}
+
+.product-edit-actions {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 5px;
+}
+
+.product-edit-actions button {
+	background-color: var(--accent-white);
+	width: 10rem;
+	padding: 0.5em;
+	margin: 1.5rem 0;
+	border-radius: 0.625em;
+	border: 1px solid var(--accent-white);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.product-edit-actions button:hover {
+	background-color: var(--accent-purple);
+	color: var(--text-color);
+	border: 1px solid var(--accent-purple);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.form-wrapper {
+	min-height: 400px;
+	height: auto;
+}
+
+.form {
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	min-height: 300px;
+	height: auto;
+}
+
+.form h5 {
+	font-size: 1.2rem;
+	padding: 0 0 0 10px;
+	margin-bottom: 10px;
+}
+
+.form hr {
+	height: 1px;
+	border: 0;
+	background-color: var(--primary-color);
+	margin-bottom: 20px;
+}
+
+.sub-container form {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr 1fr;
+	column-gap: 10px;
+	row-gap: 50px;
+}
+
+.sub-container form label,
+.sub-container form input {
+	width: 100%;
+	height: 4rem;
+}
+
+.sub-container form label p {
+	font-size: 1rem;
+	margin-bottom: 10px;
+	background-color: #d9d9d9;
+	padding: 5px 0 5px 10px;
+}
+
+.sub-container form input {
+	font-size: 1.2rem;
+	padding: 10px;
+}
+
+.sub-container form input::placeholder {
+	font-size: 1.2rem;
+	opacity: 0.5;
+}
+
+.product-edit-actions .add-product {
+	margin-top: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}

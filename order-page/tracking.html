@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Details</title>
+
+
+  <link rel="stylesheet" href="CSS Folder/tracking.css" />
+  <link rel="stylesheet" href="../frontend/src/components/user-header/user-header.css" />
+  <link rel="stylesheet" href="../frontend/src/components/footer/footer.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <div class="container">
+    
+ 
+    <!-- Order Header -->
+    <div class="order-header">
+      <h1>Order ID: <span class="bold" id="order-id">Loading...</span></h1>
+      <div class="order-actions">
+  
+      </div>
+    </div>
+
+      <!-- In .order-dates -->
+      <div class="order-dates">
+        <span>Order date: <strong id="order-date">...</strong></span>
+        <span class="delivery">
+          <i class="fas fa-truck"></i> Estimated delivery:
+          <strong id="delivery-date">...</strong>
+        </span>
+      </div>
+
+    <!-- Order Status -->
+    <div class="status-bar">
+      <div class="status-step active">
+        <span class="label">Order Confirmed</span>
+        <div class="status-dot green"></div>
+        <span class="date" id="order-confirmed-date">Wed, 11th Jan</span>
+      </div>
+      <div class="status-step">
+        <span class="label">Shipped</span>
+        <div class="status-dot gray"></div>
+        <span class="date" id="shipped-date">Wed, 11th Jan</span>
+      </div>
+      <div class="status-step">
+        <span class="label">Out For Delivery</span>
+        <div class="status-dot gray"></div>
+        <span class="date" id="out-for-delivery-date">Wed, 11th Jan</span>
+      </div>
+      <div class="status-step">
+        <span class="label">Delivered</span>
+        <div class="status-dot gray"></div>
+        <span class="date" id="delivered-date">Expected by, Mon 16th</span>
+      </div>
+    </div>
+
+    <!-- Products -->
+    <div class="products">
+      <div class="product">
+        <img src="https://storage.googleapis.com/a1aa/image/02de6daa-f9bd-44ca-9bcc-21242dff2813.jpg" alt="MacBook" />
+        <div class="info">
+          <div class="name">MacBook Pro 14”</div>
+          <div class="details">Space Gray | 32GB | 1 TB</div>
+        </div>
+        <div class="price">
+          <div>$2599.00</div>
+          <div class="qty">Qty: 1</div>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://storage.googleapis.com/a1aa/image/5884d14d-6fd2-4346-afd0-7ca2e915a02d.jpg" alt="iPad Pro" />
+        <div class="info">
+          <div class="name">iPad Pro 12.9"</div>
+          <div class="details">Space Gray | 32GB | 1 TB</div>
+        </div>
+        <div class="price">
+          <div>₱2599.00</div>
+          <div class="qty">Qty: 1</div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- 2 Column Section -->
+    <div class="two-columns">
+      <!-- Left -->
+      <div class="left-col">
+        <div class="section">
+          <h3>Payment</h3>
+          <p>Visa <strong>**56</strong>
+            <img src="https://storage.googleapis.com/a1aa/image/2ea7ea4b-8028-4ec5-cb77-07dbda73514f.jpg" width="20" height="12" alt="Visa" />
+          </p>
+        </div>
+        <div class="section">
+          <h3>Need Help</h3>
+          <ul>
+            <li><a href="#"><i class="far fa-question-circle"></i> Order Issues <i class="fas fa-arrow-up-right-from-square small-icon"></i></a></li>
+            <li><a href="#"><i class="fas fa-truck"></i> Delivery Info <i class="fas fa-arrow-up-right-from-square small-icon"></i></a></li>
+            <li><a href="#"><i class="fas fa-undo-alt"></i> Returns <i class="fas fa-arrow-up-right-from-square small-icon"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="right-col">
+        <div class="section">
+          <h3>Delivery</h3>
+          <p>Address</p>
+          <address>
+            847 Jewess Bridge Apt.<br>
+            174 London, UK<br>
+            474-769-3919
+          </address>
+        </div>
+        <div class="section">
+          <h3>Order Summary</h3>
+          <div class="summary-row" id ="subtotalh"><span>Subtotal</span><span>₱5554</span></div>
+          <div class="summary-row total" id="totallol"><span>Total</span><span>₱0.00</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+</body>
+</html>
+
+<script src="../frontend/src/components/user-header/user-header.js"></script>
+<script src="tracking.js"></script>
+<script src="../frontend/src/components/footer/footer.js"></script>

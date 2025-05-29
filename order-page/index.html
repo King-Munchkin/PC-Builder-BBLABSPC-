@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+
+  <!-- Load Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Montserrat&display=swap" rel="stylesheet">
+
+  <!-- Your Styles -->
+  <link rel="stylesheet" href="CSS Folder/styles.css">
+  <link rel="stylesheet" href="../frontend/src/components/user-header/user-header.css" />
+  <link rel="stylesheet" href="../frontend/src/components/footer/footer.css">
+</head>
+
+<body>
+    <!-- Placeholder for Header -->
+    <div id="header-placeholder"></div>
+
+  <main>
+    <section class="checkout">
+      <div class="checkout__form-wrapper">
+        <!-- LEFT-ALIGNED HEADER ABOVE FORM -->
+        <h1 class="checkout__header-title">Billing Details</h1>
+
+        <div class="checkout__form">
+          <!-- LEFT COLUMN - Billing Form -->
+          <div class="billing__form">
+            <ul>
+              <li>First Name*</li>
+              <li><input class="billing__form-input" type="text" id="first_name" required></li>
+
+              <li>Company Name*</li>
+              <li><input class="billing__form-input" type="text" id="company_name" required></li>
+
+              <li>Street Address*</li>
+              <li><input class="billing__form-input" type="text" id="street_address" required></li>
+
+              <li>Apartment, floor, etc. (optional)</li>
+              <li><input class="billing__form-input" type="text" id="apartment"></li>
+
+              <li>Town/City*</li>
+              <li><input class="billing__form-input" type="text" id="city" required></li>
+
+              <li>Phone Number*</li>
+              <li><input class="billing__form-input" type="text" id="phone_number" required></li>
+
+              <li>Email Address*</li>
+              <li><input class="billing__form-input" type="email" id="email" required></li>
+            </ul>
+
+            <div class="save__info">
+              <input type="checkbox" id="save_info">
+              <span>Save this information for faster check-out next time</span>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN - Order Summary -->
+          <div class="checkout__summary">
+            <div class="order__summary" id="subtotal">
+              <span>Subtotal:</span>
+              <span>Php XXXX.XX</span>
+            </div>
+            <hr>
+            <div class="order__summary" id="shipping">
+              <span>Shipping:</span>
+              <span>Free</span>
+            </div>
+            <hr>
+            <div class="order__summary" id="total">
+              <span>Total:</span>
+              <span>Php XXXX.XX</span>
+            </div>
+
+            <div class="payment__method">
+              <input type="radio" name="payment_method" id="bank_payment" value="Bank">
+              <label for="bank_payment">Bank</label>
+            </div>
+
+            <div class="payment__method">
+              <input type="radio" name="payment_method" id="cod_payment" value="Cash on Delivery">
+              <label for="cod_payment">Cash on Delivery</label>
+            </div>
+
+            <div class="checkout__coupon">
+              <input type="text" id="coupon_code" placeholder="Coupon Code">
+              <button type="button">Apply Coupon</button>
+            </div>
+
+            <button id="checkout__submit" type="button">Place Order</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Placeholder for Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="../frontend/src/components/user-header/user-header.js"></script>
+  <script type="module" src="checkout.js"></script>
+  <script src="../frontend/src/components/footer/footer.js"></script>
+</body>
+
+</html>
